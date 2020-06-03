@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name ="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+
+	<script>
+		$(function() {
+			var trigger = $('#trigger');
+			var menu = $('nav ul');
+			$(trigger).on('click',function(e) {
+				e.preventDefault();
+				menu.slideToggle();
+			});
+			$(window).resize(function(){
+				var w = $(window).width();
+				if(w > 320 && menu.is(':hidden')) {
+					menu.removeAttr('style');
+				}
+			});
+		});
+	</script>
+	<style>
+		* {
+			margin :0;
+			padding:0;
+			box-sizing: border-box; /*박스모델의 너비를 테두리까지 포함*/
+		}
+		body {
+			background:url('img/레몬.jpeg') no-repeat right bottom fixed;
+			background-size: cover;
+		}
+		a:link, a:hover, a:visited {
+			color : #fff;
+			text-decoration: none;
+			text-shadow: 1px 1px 0 #283744;
+		}
+		nav { width:100%; height:auto; background:#34395e;
+			font-size: 1.2em;
+			font-weight: bold; 
+			position:relative;
+		}
+		nav ul {
+			display:none; height:auto;
+		}
+		nav ul li {
+			display:block;
+			text-align: center;
+			width:100%;
+			border-bottom:1px solid #576979;
+			line-height: 50px;
+		}
+		#trigger {
+			display:block;
+			line-height:40px;
+			padding-left: 15px;
+			width:100%;
+			background-color: #283744;
+			position:relative;
+		}
+		#trigger::after{
+			content:"";
+			background: url('햄버거아이콘.png') no-repeat;
+			background-size: cover;
+			width:30px; height:30px;
+			 display:inline-block;
+			 position:absolute; 
+			 right:15px;
+			 top:10px;
+		}
+		@media screen and (min-width: 720px)
+		{
+			nav {
+				height:40px; border-bottom: 2px solid #123456;
+			}
+			nav ul {
+				display:block;
+				width:720px;
+				height:40px;
+				padding:0;
+				margin:0 auto;
+			}
+			nav ul li {
+				display:inline-block;
+				width:120px;
+				border-bottom:0;
+				border-right:1px solid #576979;
+				margin-right:-6px;
+			}
+			nav ul li :last-child {
+				border-right:0;
+			}
+			nav ul li a{
+				font-size:1em;
+				line-height: 40px;
+			}
+			#trigger{
+				display:none;
+			}
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li><a href="#">HOME</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">WEB</a></li>
+			<li><a href="#">DESIGN</a></li>
+			<li><a href="#">MAP</a></li>
+			<li><a href="#">CONTACT</a></li>
+		</ul>
+		<a href="#" id="trigger">MENU</a>
+	</nav>
+
+</body>
+</html>

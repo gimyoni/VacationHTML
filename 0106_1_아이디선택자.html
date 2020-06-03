@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ESS3 Selector Basic</title>
+	<style>
+	 	#header { width :800px; background : red; margin: 0 auto;}
+		#wrap {width :800px; height:300px; margin : 0 auto;}
+		#aside {width :200px; background :blue; float :left;}
+		#content { width:550px; background : green; float: right; padding:10px;}
+		input[type="text"]{width :50%; padding:5px; border:1px solid yellow; border-radius:5px;}
+		input[type="password"]{width :50%; padding :5px; border:1px solid yellow; border-radius:5px; margin-top:10px; margin-bottom:10px;}
+		input[type="submit"]{width :50%; background-color:white; color:gray; padding:14px 20px; margin : 8px 0; border-radius: 5px;}
+		input[type="submit"]:hover {background:black; color:white;}
+		input[type="submit"]:active {background:blue; color:white;}
+		input[type="text"]:hover{border:2px solid red;}
+		#wrap h1 {color :white;}
+		#content > h1 {color:#056F1E;}
+		#first_ul li {list-style-type: none;float:left; padding:15px;}
+		#first_ul li:nth-child(2n) {background:#ff0003;}
+		#first_ul li:nth-child(2n+1) {background:#800000;}
+		#first_ul li:first-child {border-radius: 10px 0 0 10px;}
+		#first_ul li:last-child {border-radius:  0 10px 10px 0;}
+		
+		#second_ul { clear:both; }
+		#second_ul li:first-child>a{color:red;}
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>#header 태그</h1>
+	</div>
+	<div id="wrap">
+		<div id="aside">
+		 	<h1>#aside 태그</h1>
+		 </div>
+		 <div id="content">
+		 	<h1>#content 태그</h1>
+		 	<h1>#content 태그</h1>
+		 	<h1>#content 태그</h1>
+		 	<h1>#content 태그</h1>
+		 	<h1>#content 태그</h1>
+		 	<h1>#content 태그</h1>
+		  <form>
+		 	<input type ="text"> <br>
+		 	<input type="password"> <br>
+		 	<input type="submit" value="로그인">
+		 </form>
+		 <ul id="first_ul">
+		 	<li>첫번째</li>
+		 	<li>두번째</li>
+		 	<li>셋번째</li>
+		 	<li>넷번째</li>
+		 	<li>다섯번째</li>
+		 </ul>
+		 <ul id="second_ul">
+		 	<li><a href="#">주의사항 </a></li>
+			<li><a href="#">주의사항 </a></li>
+		 	<li><a href="#">주의사항 </a></li>
+		 	<li><a href="#">주의사항 </a></li>
+			<li><a href="#">주의사항 </a></li>
+
+		 </ul>
+
+		</div>
+	</div>	
+</body>
+</html>

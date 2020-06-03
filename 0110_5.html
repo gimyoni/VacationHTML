@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+
+		$('.slideshow').each(function(){
+
+			var $slides = $(this).find('img'),
+				slideCount = $slides.length,
+				currentIndex=0;
+
+			$slides.eq(currentIndex).fadeIn();
+
+			setInterval(showNextSlide, 750);
+			function showNextSlide () {
+				var nextIndex = (currentIndex+1)%slideCount;
+
+				$slides.eq(currentIndex).fadeOut();
+				$slides.eq(nextIndex).fadeIn();
+				currentIndex = nextIndex;
+			}
+		})
+		})
+	</script>
+	<style>
+		* {
+			padding:0;
+			margin:0;
+		}
+		.slideshow {
+			overflow:hidden;
+			width:100%;
+			height:465px;
+		}
+	</style>
+</head>
+<body>
+	<header class= "hero-header">
+		<div class ="inner">
+			<div class="slideshow">
+				<img src ="img/달리기.jpg" alt="" width="100%" height="465">
+				<img src ="img/바다.jpg" alt="" width="100%" height="465">
+				<img src ="img/방향키.png" alt="" width="100%" height="465">
+				<img src ="img/어두운밤.jpg" alt="" width="100%" height="465">
+				<img src ="img/해파리.jpg" alt="" width="100%" height="465">
+			</div>
+		</div>
+	</header>		
+
+
+</body>
+</html>

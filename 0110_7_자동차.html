@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.movex:hover{
+			transform : translateX(50px);
+			transform : scale(1.5);
+		}
+		.movey:hover{
+			transform : translateX(20px);
+		}
+		.movexy:hover{
+			transform : translateX(10px,20px);
+		}
+		.tr {
+			width:100px;
+			height:100px;
+			background-color: blue;
+			border : 1px solid black;
+			transition-property: background-color,transform,width,height;
+			transition-duration: 2s,3s;
+		}
+		.tr:hover { width:200px; height:120px; background-color: pink ;transform:rotate(180deg);}
+		.ani {
+			width:100px;
+			height:100px;
+			background-color:navy;
+			animation-name:change;
+			animation-duration: 3s; 
+		}
+		@keyframes change{
+			from {
+				background-color:navy;
+				border:1px solid black;
+			}
+			to {
+				background-color:pink;
+				border:1px solid red;
+				border-radius:50%;
+			}
+
+		}
+	</style>
+</head>
+<body>
+	<div class ="orign">
+		<div class="movex"><img src ="img/해파리.jpg"></div>
+	</div>
+	<div class ="orign">
+		<div class="movey"><img src ="img/해파리.jpg"></div>
+	</div>
+	<div class ="orign">
+		<div class="movexy"><img src ="img/해파리.jpg"></div>
+	</div>
+
+	<div class ="tr">
+		
+	</div>
+	<div class = ani></div>
+
+</body>
+</html>
