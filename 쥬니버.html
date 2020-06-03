@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider();
+    });
+  </script>
+	
+</script>
+	<script>
+	$(document).ready(function(){
+	var menu_offset = $('.main-menu').offset();
+
+	$(window).scroll(function(){
+
+		if($(document).scrollTop() > menu_offset.top) {
+
+			$('.main-menu').addClass('menu-fixed');
+		
+		}else{
+		
+			$('.main-menu').removeClass('menu-fixed');
+		
+		}
+		})
+	})
+	</script>
+
+	<style>
+		* {
+			margin :0;
+			padding:0;
+			box-sizing: border-box;
+			font-family: '나눔고딕',NanumGothic,web_NanumGothic,'맑은 고딕','Malgun Gothic','dotum','helvetica','sans-serif';
+    		
+			 /*박스모델의 너비를 테두리까지 포함*/
+		}
+		.container {
+			margin: 0 auto;
+		
+			
+		}
+		.header {
+			height:80px;width: 100%; 
+			background-color: #ffee31;
+		}
+		.topmenu {
+			height:80px;
+			width:970px;
+			margin: 0 auto;
+			/*border : 1px solid red;*/
+		}
+		.recommend {
+			padding-top: 30px;
+			margin-bottom: 30px;
+			height: 425px;width: 100%; 
+			background-color:#f4eacf;
+			background-image:url(https://jrnaver-phinf.pstatic.net/20200114_105/157898648667456CDt_JPEG/E53lZzBqw4HCYtepUKp1.jpg);
+		    background-repeat: no-repeat;
+    		background-position: 50% 0;
+		}
+		.recommendback {
+			height:375px; 
+			width:975px;
+			margin: 0 auto;
+			
+		}
+		.recommend .left {
+			height:375px; width : 580px;
+			/*border : 1px solid orange;*/
+			float:left;
+		
+		}
+		.recommend .right {
+			height:375px; width : 395px;			
+			/*border : 1px solid red;*/
+			float:left;
+
+		}
+		.naverlogo {
+			width:60px; height:15px;
+			margin-top:10px;
+			float:left;
+
+		}
+		.applogo {
+			width:85px; height:30px; 
+			margin-top:5px;
+			float:left;
+			padding-left: 7px;
+		}
+		.juniorlogo {
+			float:left;
+			
+			padding-top: 25px;
+
+		}
+		.ildan {
+			width : 545px;
+			height: 80px;
+			margin : 0 auto;
+			
+		}
+		.search {	
+			width:270px;
+			height:55px;
+			float:right;
+			padding-top:30px;
+		}
+		.search input {
+
+			width:180px;
+			height:45px;
+			float:left;
+			border-top : 2px rgb(4,192,30) solid;
+			border-left : 2px rgb(4,192,30) solid;
+			border-right:0;
+			border-bottom : 2px rgb(4,192,30) solid;
+			font-size: 20px;
+		}
+		.search button {
+			float:left;
+			width:90px;
+			height:45px;
+			border-top : 2px rgb(4,192,30) solid;
+			border-left:0;
+			border-right : 2px rgb(4,192,30) solid;
+			border-bottom : 2px rgb(4,192,30) solid;
+		}
+		.more {
+			margin-top: 20px;
+			float:right;
+			width:100px;
+			height:60px;
+			/*border:1px solid red;*/
+			padding-top: 10px;
+		}
+		.menuwrap{
+			width:970px;
+			height:80px;
+			/*border:1px solid blue;*/
+			margin : 0 auto;
+		}
+		div.main-menu {
+
+		background-color:#ffee31;
+		width:100%;
+		height:80px;
+		margin:0 auto;
+		z-index:100;
+		}
+		.menulist {
+			float:left;
+			width:850px;
+			height:80px;
+			/*border: 1px solid pink;*/
+			list-style:none;
+			margin:0 auto;
+			padding :0;
+		}
+	
+		div.main-menu ul li {
+			display : inline-block;
+			/*border:1px solid red;*/
+		}
+		ul.main-menu > li:first-child{
+			padding-left:0;
+		}
+		div.main-container {
+		text-align: center;
+	
+		}
+		.menu-fixed {
+		position:fixed;
+		top:0px;
+		left:0;
+		}
+		.login {
+			/*letter-spacing : -1px;*/
+			font-size: 11px;
+			float:right;
+			width:40px;
+			height:20px;
+			background-color: rgb(255,230,23);
+			color:rgb(192,126,0);
+			border: 0.5px solid rgb(249,218,13);
+			margin-top: 5px;
+		}
+		.sound {
+			margin-left: 5px;
+			margin-top : 3px;
+			width : 30px;
+			height: 30px;
+			float:right;
+		}
+		.left h2 {
+			color: #333;
+    		line-height: 17px;
+   			font-size: 1.5em;
+   			font-weight: bold;
+		}
+		
+		.lefttitle {
+			/*border: 1px solid red;*/
+			width:500px;
+			height:24px;
+			margin-bottom: 10px;
+		} 
+		.img1 {
+			float :left;
+			width : 186px;
+			height:334px;
+			background-color: white;
+		}
+		.img1:hover {
+			
+			background-color: rgba(255,238,49,0.8);
+		
+		}
+		.imgright {
+			margin-left:10px;
+			margin-right:10px;
+			margin-bottom:10px;
+			width : 186px;
+			height: 162px;
+			background-color: white;
+			float: left;
+		}
+		.imgleft {
+			margin-bottom:10px;
+			width:186px;
+			height:162px;
+			background-color: white;
+			float: left;
+
+		}
+		.imgright:hover {
+			
+			background-color: rgba(255,238,49,0.8);
+		
+		}
+		.imgleft:hover {
+			
+			background-color: rgba(255,238,49,0.8);
+		
+		}
+		.rimgright:hover {
+			
+			background-color: rgba(255,238,49,0.8);
+		
+		}
+		.rimgleft:hover {
+			
+			background-color: rgba(255,238,49,0.8);
+		
+		}
+		.rimgright {
+			margin-right:10px;
+			margin-bottom:10px;
+
+			width : 186px;
+			height: 162px;
+			background-color: white;
+			float: right;
+		}
+		.rimgleft {
+			margin-bottom:10px;
+			width:186px;
+			height:162px;
+			background-color: white;
+			float: right;
+
+		}
+		.category {
+			margin-top:3px;
+			font-weight:600;
+			/*border: 1px solid red;*/
+			width : 100px;
+			height:20px;
+			margin-left:10px;
+			font-size: 13px;
+			line-height: 17px;
+		}
+		.minititle {
+			margin-left:10px;
+			width : 150px;
+			height:23px;
+			font-weight:700;
+			font-size: 14px;
+			line-height: 17px;
+			/*border: 1px solid red;*/
+		}
+		.rminititle{
+			margin-top: 20px;
+			margin-left:10px;
+			width : 168px;
+			height:19px;
+			font-weight:700;
+			font-size: 14px;
+			line-height: 17px;
+			/*border: 1px solid red;*/
+			overflow: hidden;
+    		white-space: nowrap;
+    		text-overflow: ellipsis;
+		}
+		.righttitle {
+			width:200px;
+			height:24px;
+			/*border:1px solid red;*/
+			margin-bottom: 10px;
+		}
+		.character {
+			/*border : 1px solid blue;*/
+			width:100%;
+			height:200px;
+			margin-bottom: 30px;
+
+		}
+		.chacenter {
+			width:1086px;
+			height:200px;
+			margin:  0 auto;
+			/*border: 1px solid red;*/
+			
+		}
+		.chacenter h2 {
+			width:975px;
+			margin :0 auto;
+			/*border: 1px solid red;*/
+		}
+		.slider {
+			width:500px;
+			height:100px;
+		}
+		
+		.fline {	
+			margin-left: 50px;
+			float:left;
+			width:94px;
+			height:134px;
+			/*border: 1px solid red;*/
+			
+		}
+		.line {	
+			margin-left: 15px;
+			float:left;
+			width:95px;
+			height:140px;
+			/*border: 1px solid red;*/
+			
+		}
+		.fback {
+		
+			background-color: rgb(239,239,239);
+			width :94px;
+			height:94px;
+			border-radius: 100px;
+			margin-bottom: 12px;
+		}
+		.back {
+			
+			background-color: rgb(239,239,239);
+			width :94px;
+			height:94px;
+			border-radius: 100px;
+			margin-bottom: 12px;
+		}
+		.aback {
+			border-radius: 100px;
+			margin-bottom: 12px;
+		}
+		.fback:hover {
+			background-color: rgb(218,218,218);
+		}
+		.back:hover {
+			background-color: rgb(218,218,218);
+		}
+		.slider li  {
+			list-style: none;
+		}
+		.imgname {
+			/*border :1px solid red;*/
+			width:94px;
+			text-align: center;
+			height:15px;
+   			font-size: 12px;
+   			line-height: 15px;
+   			margin: 0 auto;
+		}
+		.listwrap {
+			float :left;
+			margin-top:10px;
+			height:55px;
+			width : 850px;
+			/*border :1px solid red;*/
+		}
+		.li1 {
+			width:125px;
+			height:55px;
+			float :left;
+			
+		}
+		.li2 {
+			margin-left: 20px;
+			width:130px;
+			height:55px;
+			float :left;
+		}
+		.li3 {
+			margin-left: 20px;
+			width:170px;
+			height:55px;
+			float :left;
+				
+		}
+		.li4 {
+			margin-left: 20px;
+			width:165px;
+			height:55px;
+			float :left;
+			
+		}
+		.li5 {
+			margin-left: 20px;
+			width:165px;
+			height:55px;
+			float :left;
+				
+		}
+		.promotion {
+			width:100%;
+			height:280px;
+			/*border :1px solid red;*/
+			margin-bottom: 100px;
+		}
+		.procenter {
+			width:982px;
+			height:100%;
+			/*border :1px solid blue;*/
+			margin: 0 auto;
+		}
+		.proright {
+			float : left;
+			width : 400px;
+			height:100%;
+			/*border :1px solid purple;*/
+
+		}
+		.proright h2 {
+			width : 380px;
+			height:24px;
+			/*border :1px solid purple;*/
+			margin-bottom: 10px;
+		}
+		.promid {
+			float:left;
+			width : 260px;
+			height:100%;
+			/*border :1px solid purple;*/
+		}
+		.proleft {
+			float:left;
+			width : 320px;
+			height:100%;
+			/*border :1px solid purple;*/
+			padding-top: 34px;
+		}
+		.adv1 {
+			width : 186px;
+			height : 216px;
+			background-color: white;
+			/*border :1px solid purple;*/
+			float : left;
+			margin-right:10px;
+		}
+		.adv1 .category {
+			color:#9c6ff9;
+			margin-top:3px;
+			font-weight:600;
+			/*border: 1px solid red;*/
+			width : 100px;
+			height:20px;
+			margin-left:10px;
+			font-size: 13px;
+			line-height: 17px;
+		}
+		.adv1 .minititle {
+			margin-left:10px;
+			width : 160px;
+			height:23px;
+			font-weight:700;
+			font-size: 14px;
+			line-height: 17px;
+			/*border: 1px solid red;*/
+		}
+		.adv2 {
+			width : 258px;
+			height : 216px;
+			background : #26a1ff;
+		}
+		.promid h2 {
+			width : 240px;
+			height:24px;
+			/*border :1px solid purple;*/
+			margin-bottom: 10px;
+		}
+		.adv2 .category {
+			color:white;
+			margin-top:3px;
+			font-weight:600;
+			/*border: 1px solid red;*/
+			width : 100px;
+			height:20px;
+			margin-left:10px;
+			font-size: 13px;
+			line-height: 17px;
+		}
+		.adv2 .minititle {
+			color:white;
+			margin-left:10px;
+			width : 240px;
+			height:23px;
+			font-weight:700;
+			font-size: 14px;
+			line-height: 17px;
+			/*border: 1px solid red;*/
+		}
+	</style>
+</head>
+<body>
+	<div class = "container">
+		<div class = "header">
+			<div class ="topmenu">
+				<div class ="sound">
+					<img src ="img/소리나는.png" ONMOUSEOVER="this.src='img/소리안나는.png'" ONMOUSEOUT="this.src='img/소리나는.png'">
+				</div>
+				<div >
+					<a href ="https://nid.naver.com/nidlogin.login?mode=form&url=https%3A%2F%2Fjr.naver.com%2F%3Flogin%3Dtrue"><button class = "login">로그인</button></a>
+				</div>
+				<div class ="naverlogo">
+					<a href = "https://www.naver.com/" ><img src ="img/네이버로고.png" ></a>	
+				</div>
+				<div class ="applogo">
+					<img src ="img/쥬니버앱로고.png" >
+				</div>
+				<div class = "ildan">
+					<div class ="juniorlogo">
+						<img src ="img/쥬니버로고.png">
+					</div>
+					<div class = "search">
+						<input type="text" style="CURSOR:hand;" title="검색어를 입력하세요">
+						<button><img src ="img/검색버튼.png"></button>
+					</div>
+						
+				</div>
+				
+			</div>
+		</div>
+		<div class ="main-menu">
+			<div class= "menuwrap">	
+				<div class = "listwrap">
+				<div class = "li1">	
+				<img src ="img/Nc동요.png" ONMOUSEOVER="this.src='img/클릭동요.png'" ONMOUSEOUT="this.src='img/Nc동요.png'">
+				</div>
+				<div class = "li2"><img src ="img/N동화.png" ONMOUSEOVER="this.src='img/클릭동호.png'" ONMOUSEOUT="this.src='img/N동화.png'">
+				</div>
+				<div class = "li3"><img src ="img/ntv.png" ONMOUSEOVER="this.src='img/클릭동영상.png'" ONMOUSEOUT="this.src='img/ntv.png'">
+				</div>
+				<div class = "li4" ><img src ="img/n놀이.png"ONMOUSEOVER="this.src='img/클릭놀이.png'" ONMOUSEOUT="this.src='img/n놀이.png'">
+				</div>
+				<div class = "li5"><img src ="img/n엔터.png"ONMOUSEOVER="this.src='img/클릭엔터.png'" ONMOUSEOUT="this.src='img/n엔터.png'">
+				</div>
+				</div>
+				<div class = "more">
+					<img src = "img/더더보기.png"> 
+				</div>
+				
+			</div>
+		</div>
+		<div class = "recommend">
+			<div class = "recommendback">
+			<div class = "left">
+				<div class = "lefttitle">
+				<img src="https://image-jr.pstatic.net/mainhome/recommend/title/default_title.png" alt="쥬니스 친구들이 추천해요!">
+				</div>
+				<div class = "img1"> <img src="https://jrnaver-phinf.pstatic.net/20200113_47/1578900667912NrzWk_JPEG/LrdUZe0PuKzeba2yy9bp.jpg" width="186" height="282">
+					<div class = "category">TV동영상</div>
+					<div class ="minititle">더기와 막대기 배지</div>
+				</div>
+				<div class = "imgright">
+					<img src="https://jrnaver-phinf.pstatic.net/20200113_136/1578900668177HNBpb_JPEG/FQG1OnJS8Kfxcbzj4TaQ.jpg?type=u380_224" width="186" height="110">
+					<div class="category">공룡나라</div>
+					<div class="minititle">카르노타우루스</div>				
+				</div>
+				<div class = "imgleft">
+					<img src="https://jrnaver-phinf.pstatic.net/20200113_259/1578900668515gsxqg_JPEG/IIPmro0vLaBc9VqLuBuN.jpg?type=u380_224" width="186" height="110">
+					<div class="category">동요</div>
+					<div class="minititle">반짝반짝 작은별</div>
+				</div>
+				<div class = "imgright">
+					<img src="https://jrnaver-phinf.pstatic.net/20200113_282/1578900668782hITzl_JPEG/NQOTSH5EoigMkYvkGJ12.jpg?type=u380_224" width="186" height="110">
+					<div class="category">TV동영상</div>
+					<div class="minititle">The Right Kite</div>
+				</div>
+				<div class = "imgleft">
+					<img src="https://jrnaver-phinf.pstatic.net/20200113_210/1578900669113Cytwc_JPEG/nv2J9cBuKdbzb3fG2ZpC.jpg?type=u380_224" width="186" height="110">
+					<div class="category">TV동영상</div>
+					<div class="minititle">외로운 구름</div>
+				</div>
+			</div>
+			<div class = "right">
+				<div class = "righttitle">
+					<img src="img/righttitle.png" width="132" height="22">
+				</div>
+				<div class = "rimgleft">
+					<img src="https://phinf.pstatic.net/tvcast/20181228_73/8ghGg_1545963760083VULqC_PNG/1545963645661.png?type=u380_224" width="186" height="110">
+					<div class="rminititle">에너지 절약송 [깨비키즈 KEBIKIDS]</div>
+				</div>
+				<div class = "rimgright">
+					<img src="https://jrnaver-phinf.pstatic.net/20191231_224/1577754398520vx1bc_JPEG/wff4e1CXhA2Cn7JSXh0M.jpg" width="186" height="162">
+					
+				</div>
+				<div class = "rimgleft">
+					<img src="https://phinf.pstatic.net/tvcast/20190517_262/OaToA_1558085224363d47qn_JPEG/1558085143912.jpg?type=u380_224" width="186" height="110">
+					<div class="rminititle">꼬모는 궁금해 | 자석 | 사물탐구 놀이</div>
+				</div>
+				<div class = "rimgright">
+					<img src="https://phinf.pstatic.net/tvcast/20171110_290/jThOH_15102950539127zkta_PNG/1510295049819.png?type=u380_224" width="186" height="110" alt="" class="thumb">
+					<div class="rminititle">햇빛 친구 에너지 나눔교실 | 태양에너지 | 에너지 절약 | 환경 동화★지니키즈</div>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="character">
+			<div class = "chacenter">
+				<h2><img src="https://image-jr.pstatic.net/jrui/main/img/tit_character.gif" alt="캐릭터"></h2>
+				<ul class="slider">
+    				<li>
+    					<ul>
+    						
+    						<li class = "fline"><img class="fback" src="https://jrnaver-phinf.pstatic.net/20191126_120/1574733338103f8m62_PNG/dvRfO6aXC1tGs6XsAa3q.png?type=m160_160" alt="쥬니버동요" width="94" height="94"
+    							border-radius="100"><div class = "imgname">쥬니버동요</div>
+    						</li>
+    						
+    						
+    						<li class = "line"><img class = "aback" src="https://jrnaver-phinf.pstatic.net/20191108_85/1573192192787D26pt_JPEG/Yt0hw59wGYNG2Yp8gFCx.jpg?type=m160_160" alt="콩순이 쏭쏭쏭" width="94" height="94" border-radius="100"><div class = "imgname">콩순이 쏭쏭쏭</div>
+    						</li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20190808_88/15652358418094y0E0_PNG/1yAjIbJXwEoNm3Ch0O63.png?type=m160_160" alt="쥬니투니송" width="94" height="94" border-radius="100"><div class = "imgname">쥬니투니송</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20180601_247/1527815842639knziL_PNG/qUdSW2VtKRdSrEd0gIEq.png?type=m160_160" alt="뽀로로TV"><div class = "imgname">뽀로로TV</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20190125_50/1548412354948oqoel_PNG/9GGyduU4KftfEmwBApBq.png?type=m160_160" alt="쥬니버 생활습관캠페인"><div class = "imgname">쥬니버 생활습관캠페인</div></li>
+    						
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20190430_109/1556600256343zcxXx_PNG/0tKuthsL9irU2fYJBQ8x.png?type=m160_160" alt="캐리와 장난감친구들"><div class = "imgname">캐리와 장난감친구들</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20190429_283/15565152197521nRTz_PNG/znX0Ivl5R1NvUujv0wD4.png?type=m160_160" alt="쥬니버 역사송"><div class = "imgname">쥬니버 역사송</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20191120_193/1574242410555Ng4FU_PNG/v0nLgJfsdFfqd2oaFXi7.png?type=m160_160" alt="키즈몬 잉글리쉬"><div class = "imgname">키즈몬 잉글리쉬</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20170824_151/1503569632578Iun2e_PNG/tsTrDJ4ZU3cRE8WqfX9w.png?type=m160_160" alt="엉뚱발랄 콩순이와 친구들"><div class = "imgname">엉뚱발랄 콩순이와 친구들</div></li>
+    					
+    					</ul>
+    				</li>
+    				<li>
+    					<ul>
+    						
+    						<li class = "fline"><img class="fback" src="https://jrnaver-phinf.pstatic.net/20190314_120/1552545048413YoPlx_PNG/crvSEbVRXJCK4tdRfJJZ.png?type=m160_160" alt="뽀롱뽀롱 뽀로로"><div class = "imgname">뽀롱뽀롱 뽀로로</div>
+    						</li>
+    						
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20190326_62/1553567029837dSq7j_PNG/xINrg4QzRRtoj5qbGgrt.png?type=m160_160" alt="뽀로로 극장판"><div class = "imgname">뽀로로 극장판</div>
+    						</li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20190423_76/1555997936558mEAmC_PNG/RZimDAHegqElrvwKREEO.png?type=m160_160" alt="베이비제이크"><div class = "imgname">베이비제이크</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20180619_210/1529398121243mAvQk_PNG/sk9thXe06SP2cbrTYJOW.png?type=m160_160" alt="지니키즈">
+    						<div class = "imgname">지니키즈</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20170829_15/150397944305555gUy_PNG/AARK9UOPVA5SWbEJw1mf.png?type=m160_160" alt="종이나라 포니랑"><div class = "imgname">종이나라 포니랑</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20191231_39/1577776442462qVjd6_PNG/s6CmNjnbUgUzLShyMF8m.png?type=m160_160" alt="대발이 율동동요">
+    						<div class = "imgname">대발이 율동동요</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20170331_269/14909538770661wWeq_PNG/H5uUORgQpAsazaH8CnlB.png?type=m160_160" alt="말이야와 아이들">
+    						<div class = "imgname">말이야와 아이들</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20170928_81/1506570601454IrSBA_PNG/cvWrmhMe6oMQwakr5y1D.png?type=m160_160" alt="핑크퐁 한글이팡팡">
+    						<div class = "imgname">핑크퐁 한글이팡팡</div></li>
+
+    						<li class = "line"><img class="back" src="https://jrnaver-phinf.pstatic.net/20180625_2/1529918517670yGwGn_PNG/qVqRK5RXYg42Dpah7OqB.png?type=m160_160" alt="선물공룡 디보">
+    						<div class = "imgname">선물공룡 디보</div></li>
+    					</ul>
+    				</li>
+				</ul> 
+			</div>
+		</div>
+		<div class = "promotion">
+			<div class = "procenter">
+				<div class = "proright">
+				<h2><img src="https://image-jr.pstatic.net/jrui/main/img/tit_creative2.gif" alt="키즈엔터"></h2>
+				<div class = "adv1"><img width="186" height="164"  src="https://jrnaver-phinf.pstatic.net/20200116_102/1579138685709nF0Sv_JPEG/3zkUXEXjzeL3jwP4xvbH.jpg">
+					<div class = "category">색칠놀이</div><div class = "minititle">이모티콘 그리기 색칠놀이</div></div>
+					<div class = "adv1"><img width="186" height="164" src="https://jrnaver-phinf.pstatic.net/20200116_195/15791386859898XHtW_JPEG/gkJJPkKsQknqwBqZl1Wo.jpg"><div class = "category">키즈예능</div><div class = "minititle">신 음식 먹기 챌린지</div></div>
+				</div>
+				<div class = "promid">
+					<h2><img src="https://image-jr.pstatic.net/jrui/main/img/tit_theme.gif" alt="테마"></h2>
+					<div class ="adv2"><img width="258" height="164" alt="" class="thumb" src="https://jrnaver-phinf.pstatic.net/20160719_248/1468907122771baXfm_PNG/JTjvVpCkkxAUriEIT65k.png">
+					<div class = "category">테마모음</div><div class = "minititle">#바른 마음, 좋은 습관! 노래로 배워요</div></div>
+
+				</div>
+				<div class = "proleft">
+					<img src ="img/침대.jpg" width="320" height="240">
+				</div>
+			</div>
+		</div>
+		<div class = "promotion">
+		</div >
+		<div class = "promotion">
+		</div > 
+
+</body>
+</html>
